@@ -19,20 +19,25 @@
     url("fonts/TTLakes-Regular.ttf") format("truetype");
 }
 
+*{
+  margin:0;
+  padding: 0;
+  border: 0;
+}
 
+button{
+  background:rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0) ;
+  cursor: pointer;
+}
 
 ul{
   list-style: none;
-  padding: 0;
   display: block;
 }
 
 a{
   text-decoration: none;
-}
-body, h1, ul, p, button{
-  margin:0;
-  padding: 0;
 }
 
 
@@ -42,42 +47,58 @@ body, h1, ul, p, button{
   border-radius: 6px;
 }
 
+
+
 body{
   background-color: #f8f8f8;
 }
 
+.container{
+  max-width: 1120px;
+  margin: auto;
+}
 
-.header {
-  height: 88px;
+
+.header{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.nav__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-
+  gap: 39px;
+  padding: 19px 5%;
+  border-bottom: 1px solid #D9FFF5;
 }
 
-.header__menu {
-  display: flex;
-  gap:15px;
+.nav__item{
+  display:flex;
   align-items: center;
+  gap: 16px;
+ 
+  
 }
 
-
-.header__menu:first-child:not(:only-child){
+ul.nav__item:first-child{
   display: none;
 }
 
 
 
-
-.header__menu::before{
+.nav__item.nav__item::before{
     content: "";
     display: block;
     width: 2px;
     height: 32px;
     background-color: #EAEAEA;
     position: absolute;
-    right: 0px;
+    right: 130px;
     top: 30px;
     border-radius: 1px;
 }
@@ -94,18 +115,13 @@ body{
   border-radius: 50%;
 }
 
-
-
-
-.main {
-  background-color: #f8f8f8;
-  border-top: 1px solid #d9fff5;
+.nav__text{
+  display: none;
 }
 
-.main-header__title{
-  padding-left: 5%;
-  padding-top: 24px;
-  padding-bottom: 24px;
+.nav__title{
+  padding: 20px 5%;
+ 
 }
 
 .title__text{
@@ -113,33 +129,30 @@ body{
   font-size: 28px;
 }
 
-.main-header__nav{
-    display:none;
-}
-
-.main-header__title::before {
-  content: "a";
-  color:rgba(0, 0, 0, 0);
-  line-height: 38px;
-  border-right: 4px solid  #41f6d7;
-  display: block;
-  position: absolute;
-  top: 113px;
-  left: -12px;
-  
+.nav__title::before{
+  content: "";
+  border-right: 4px solid #41f6d7;
+  height: 40px;
+  display: inline-block;
   border-radius: 0 4px 4px 0;
+  position: absolute;
+  top: 110px;
+  left:0;
 }
 
-.nav-scroller__items {
+
+
+
+.nav-scroller__list {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
-  padding-left:5%;
- 
+  padding-left: 5%;
+  gap:4px;
 }
 
-.nav-scroller__items::-webkit-scrollbar {
+.nav-scroller__list::-webkit-scrollbar {
   width: 0;
 }
 
@@ -155,14 +168,14 @@ body{
 }
 
 
-.nav-scroller__items::after {
+.nav-scroller__list::after {
   width: 20px;
   height: 40px;
   content: "";
   display: block;
   position: absolute;
-  top: 183px;
-  right: 7.5px;
+  top: 170px;
+  right:0px;
   background: linear-gradient(
     270deg,
     #f8f8f8 16.84%,
@@ -176,19 +189,21 @@ body{
   justify-content: center;
   flex-direction: column;
   gap: 16px; 
-  border: 1 solid red;
 }
 
 
 .description__text{
-  padding-left: 5%;
+  display:flex;
+  flex-direction: column;
+  padding: 0 5%;
 }
 
-.text{
+
+.text__full-text{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 90px;
+  flex-basis: 90px; 
   overflow: hidden;
 }
 
@@ -204,26 +219,21 @@ body{
 
 
 .description__bnt-next{
-  background:rgba(0, 0, 0, 0);
-  border: rgba(0, 0, 0, 0) ;
-  cursor: pointer;
   font-family: "TT Lakes Medium";
   color: #1B1C21;
   font-size: 16px;
   align-self: flex-start;
-  padding-left:50px;
+  padding-left: 32px;
 }
 
 .description__bnt-next::before{
   display: block;
   width: 10px;
   height: 10px;
-  content: "";
+  content: url("img/arrow.png");
   position:relative;
-  right: 20px;
-  top: 15px;
-  background-color: #FF3E79;
-  background-image: url("../img/arrow.png");
+  right: 25px;
+  top: 10px;
   background-size: contain;
 }
 
@@ -235,63 +245,55 @@ body{
 
 
 
-
 @media (min-width: 768px){
 
-  .header {
-    gap: 170px;
-  }
-
-
-
-  .header__left-menu{
-    gap: 30px ;
-  }
-
-  .menu-with-splin{
+  ul.nav__item:first-child{
     display: flex;
-    gap: 30px;
   }
-  
-  .header__logo::before{
+
+  li.nav__item:nth-child(n){
+    gap: 43px;
+  }
+
+  .nav__list li.nav__item a:first-child::before{
     content: "";
     display: block;
     width: 2px;
     height: 32px;
     background-color: #EAEAEA;
     position: absolute;
-    left: 95px;
+    left: 100px;
     top: 30px;
     border-radius: 1px;
+  }
+
+  .nav__item.nav__item::before{
+    right: 153px;
    }
 
-   .header__menu:first-child:not(:only-child){
+   .description{
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 5%;
+     gap: 48px;
+   }
+
+   .text{
     display: flex;
-  }
-  .header__menu::before{
-    right: 150px
-  }
+    flex-direction: column;
+    padding: 0;
+    width: 45.25%
+   }
 
-    .nav-scroller__items{
-      padding-left: 3%;
-    }
-    
-
-    .description{
+    .text__full-text{
         display: flex; 
-        
         gap:11px; 
-        flex-wrap: wrap;
-        height: 190px; 
+        flex-basis: 135px;
+        
     }
 
-    .description__text{
-        width:45%;
-    }
 
-    .text{
-      height: 125px;
-    }
+  
 
     .description__image{
         display: flex;
@@ -302,45 +304,52 @@ body{
   }
 
     @media (min-width: 1120px){
-      .description__text, .main-header__title, .nav-scroller__items{
+      .description__text, .nav-scroller__list{
         padding: 0;
+      }
+
+      .nav__item.nav__item::before{
+        display: none;
+      }
+      .nav__list li.nav__item a:first-child::before{
+        display: none;
       }
 
 
       .container{
+        position: relative;
         max-width: 1120px;
         margin: auto;
-        padding-right: 30px;
-        padding-left: 30px;
+        padding: 42px 32px 0 32px;
       }
 
-        
-        .header{
-          display: none;
-        }
 
-        .main{
-          padding-top: 20px;
-        }
-
-        .main-header{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 50px;
-          padding-top: 42px;
-          padding-bottom: 9px;
+      .header{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
 
-        .main-header__title{
-          display: flex;
-        }
 
-  
-        .main-header__nav{
-          display: flex;
-          justify-content: flex-end;
-          gap: 40px;
+      ul.nav__item:first-child, li.nav__item:first-child{
+        display: none;
+      }
+
+      .nav{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav__list{
+        padding:0;
+        background-color: transparent;
+        border-bottom: 0;
+      }
+
+        ul.nav__item:last-child{
+          gap: 32px;
         }
 
         .nav__btn{
@@ -348,21 +357,25 @@ body{
           justify-content: space-between;
           align-items: center;
           gap: 10px;
-
         }
 
-
-        .main-header__title::before{
-          position: relative;
-          top: 0;
-          left: -35px;
+        .nav__title{
+          padding: 0;
+          
         }
 
-        .nav-scroller__items {
+        .nav__title::before{
+          
+          position:absolute;
+          top:40px
+          
+        }
+        
+        .nav-scroller__list {
             flex-wrap: wrap;
         }
 
-          .nav-scroller__items::after {
+          .nav-scroller__list::after {
             display: none;
           }
 
@@ -370,42 +383,34 @@ body{
 
         .header__menu::before{
             display: none;
-        }
+        } 
 
-        .main {
-          border-top: none;
-        }
-        
-       
-
-        .nav__text{
+      .nav__text{
+            display: inline;
             color: #1B1C21;
             font-family: "TT Lakes Medium" ;
             Font-size: 16px;
             Line-height: 24px;
         }
 
-      .text{
-        height: 200px;
-      }
+     
 
       .description{
-        height: 350px;
-        /* justify-content: space-around; */
-        gap: 10px;
+        padding: 0;
+        height: auto;
+      }
+
+      .description__text{
         
+        padding-top: 10px;
+      }
+
+      .description__image{
+        height: 290px
       }
   
 
-        .description__image{
-          height: 350px;
-            width: 50%
-        }
-
-        .description__text{
-           width: 40%;
-           margin-top: 10px;  
-        }
+       
 
 
         
