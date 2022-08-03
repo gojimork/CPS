@@ -78,7 +78,7 @@ body{
   align-items: center;
   background-color: white;
   gap: 39px;
-  padding: 19px 5%;
+  padding: 19px 20px;
   border-bottom: 1px solid #D9FFF5;
 }
 
@@ -112,7 +112,7 @@ body{
 
 
 
-.nav__icon-background{
+.icon{
   display: flex;
   justify-content:center;
   align-items: center;
@@ -127,7 +127,7 @@ body{
 }
 
 .nav__title{
-  padding: 20px 5%;
+  padding: 20px 20px;
  
 }
 
@@ -155,7 +155,7 @@ body{
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
-  padding-left: 5%;
+  padding-left: 20px;
   gap:4px;
 }
 
@@ -203,11 +203,12 @@ body{
 .description__text{
   display:flex;
   flex-direction: column;
-  padding: 0 5%;
+  padding: 0 20px;
+  gap: 16px;
 }
 
 
-.text__full-text{
+.description__paragraphs{
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -226,22 +227,23 @@ body{
 
 
 
-.description__bnt-next{
+.readmore-btn{
   font-family: "TT Lakes Medium";
   color: #1B1C21;
   font-size: 16px;
   align-self: flex-start;
   padding-left: 32px;
+  position:relative;
 }
 
-.description__bnt-next::before{
+.readmore-btn::before{
   display: block;
   width: 10px;
   height: 10px;
   content: url("img/arrow.png");
-  position:relative;
-  right: 25px;
-  top: 10px;
+  position:absolute;
+  left: 10px;
+  top: 0px;
   background-size: contain;
 }
 
@@ -288,18 +290,18 @@ body{
    .description{
      flex-direction: row;
      justify-content: space-between;
-     padding: 0 5%;
+     padding: 0 20px;
      gap: 48px;
    }
 
-   .text{
+   .description__text{
     display: flex;
     flex-direction: column;
     padding: 0;
     width: 45.25%
    }
 
-    .text__full-text{
+    .description__paragraphs{
         display: flex; 
         gap:11px; 
         flex-basis: 135px;
@@ -318,24 +320,26 @@ body{
   }
 
     @media (min-width: 1120px){
-      .description__text, .nav-scroller__list{
-        padding: 0;
-      }
-
-      .nav__item.nav__item::before{
-        display: none;
-      }
-      .nav__list li.nav__item a:first-child::before{
-        display: none;
-      }
-
-
       .container{
         position: relative;
         max-width: 1120px;
         margin: auto;
         padding: 42px 32px 0 32px;
       }
+
+
+      .description__text, .nav-scroller__list{
+        padding: 0;
+      }
+
+    
+
+      .nav__subitem:last-child::before{
+        display: none;
+      }
+
+
+    
 
 
       .header{
