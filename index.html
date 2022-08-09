@@ -7,59 +7,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <aside class="conteiner">
-        <div class="header">
-            <nav class="nav">
-                <ul class="nav__header ">
-                    <li class="nav__item">
-                        <a href="#"  class="icon"><img  src="img/cancel.png" alt="cancel"></a>
-                        <a class="header__logo"  href="#"><img  src="img/logo.png" alt="logo"></a> 
-                    </li>
+<body >
+    <div class="container">
+        <header class="header">
+            <nav >
+                <ul class="nav">
                     <li>
-                        <a href="#"  class="icon"><img  src="img/search2.png" alt="search"></a>
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="/Block5/index.html"  class="icon"><img  src="img/burger.png" alt="menu"></a>
+                                <a class="header__logo"  href="#"><img  src="img/logo.png" alt="logo"></a> 
+                            </li>
+
+                            <li class="nav__item ">
+                                <ul class="nav__subitem ">
+                                    <li><a class="icon" href="#"><img  src="img/phone.png" alt="phone"></a></li>
+                                    <li><a class="icon" href="#"><img  src="img/chat.png" alt="chat"></a></li>
+                                    <li><a class="icon" href="#"><img  src="img/men.png" alt="men"></a></li>
+                                </ul>
+                                <ul class="nav__subitem ">
+                                    <li><a class="nav__btn" href="#">
+                                            <span class="nav__text">Оставить заявку</span>
+                                            <span class="icon"><img src="img/repair.png" alt="repair"></span>
+                                    </a></li>
+                                    <li><a class="nav__btn" href="#">
+                                        <span class="nav__text">Статус ремонта</span>
+                                        <span class="icon">
+                                            <img  src="img/search.png" alt="checkstatus ">
+                                        </span>        
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav__title title">
+                        <h1 class="title__text">Услуги и сервисы</h1>
                     </li>
                 </ul>
             </nav>
-            <nav>
-                    <ul class="menu-list">
-                        <li><a class="menu-list__link">Ремонт техники</a></li>
-                        <li><a class="menu-list__link">Услуги и сервисы</a></li>
-                        <li><a class="menu-list__link">Корпоративным клиентам</a></li>
-                        <li><a class="menu-list__link">Продавцам техники</a></li>
-                        <li><a class="menu-list__link">Партнерам</a></li>
-                        <li><a class="menu-list__link">Производителям</a></li>
-                        <li><a class="menu-list__link">Наши сервисные центры</a></li>
-                        <li><a class="menu-list__link">Контакты</a></li>
-                    </ul>
-            </nav>
-        </div>
+            <nav class="nav-scroller">
+                    <ul class="nav-scroller__list">
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">
+                                    Ремонтируемые бренды
+                            </a>
+                        </li>
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">
+                                    Ремонтируемые устройства
+                            </a>
+                        </li>
+                       
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">
+                                    Цены на услуги
+                            </a>
+                        </li>
 
-        <div class="footer">
-                <nav class="feedback__list nav">
-                    <ul class="nav__item">
-                        <li><a class="icon" href="#"><img  src="img/phone.png" alt="phone"></a></li>
-                        <li><a class="icon" href="#"><img  src="img/chat.png" alt="chat"></a></li>
-                        <li><a class="icon" href="#"><img  src="img/men.png" alt="men"></a></li>
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">
+                                    Адреса сервисных центров
+                            </a>
+                        </li>
+                       
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">  
+                                    Спецаные цены
+                            </a>
+                        </li>
+                        <li class="nav-scroller__item">
+                            <a class="nav-scroller__link" href="#">
+                                    Отзывы
+                            </a>
+                        </li>
                     </ul>
-                    <ul class="nav__contacts">
-                        <li><button  class="nav__email" onclick="window.location.href = 'mailto:mail@cps.com';">mail@cps.com</button></li>
-                        <li><button class="nav__tel" onclick="window.location.href = 'tel:+78008908900';" >8 800 890 8900</button ></li>
-                    </ul>
-                </nav>
-            <form class="languages">
-                <input class="languages__radio-bnt" id="RU" name="language" type="radio" checked>
-                <label class="languages__value" for="RU" href="#">RU</label>
-                
-                <input class="languages__radio-bnt" id="EN" name="language" type="radio">
-                <label class="languages__value" for="EN" href="#">EN</label>
-                
-                <input class="languages__radio-bnt" id="CH" name="language" type="radio">
-                <label class="languages__value" for="CH" href="#">CH</label>
-            </form>
+                          
+            </nav>   
+
+        </header>
+
+        <section class="description">
             
-        </div>
-    </aside>
-    
+            <div class="description__text" >
+                <div class="description__paragraphs">
+
+                    <p class="text__paragraph">
+                            Мы являемся авторизованным 
+                            сервисным центром по ремонту техники 
+                            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с 
+                            официальной гарантией производителя.
+                    </p>
+                    <p class="text__paragraph">
+                            Мы успешно работаем с 1992 года и заслужили 
+                            репутацию надежного партнера
+                            что подтверждает большое количество постоянных клиентов. 
+                            Мы гордимся тем, что к нам обращаются по рекомендациям и,
+                            в свою очередь, советуют нас родным и близким.
+                    </p>
+                    
+                </div>
+
+                <button class="readmore-btn">Читать далее</button>
+
+            </div>
+                
+
+                
+            <div class="description__image">
+                <img  class="disc__img" src="img/photo.jpg" alt="photo">
+            </div>
+                              
+         </section>
+
+    </div>
+        
+
 </body>
 </html>
