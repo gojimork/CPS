@@ -1,5 +1,4 @@
 if (window.screen.width < 768) {
-
 const swiper = new Swiper('.swiper',
 {
     pagination: {
@@ -17,26 +16,39 @@ const swiper = new Swiper('.swiper',
 });
 }
 
-let readMoreBtn = document.querySelector(".readmore-btn")
-console.log(readMoreBtn);
+let showAll = false
 
-let hiddenBnt = document.querySelector('.hidden-btn');
-console.log(hiddenBnt);
+let readMoreBtn = document.querySelector(".readmore-btn")
+
+let  textBtn = document.querySelector(".readmore-btn__text")
 
 let swiperContainer = document.querySelector(".swiper")
-console.log(swiperContainer);
 
-readMoreBtn.addEventListener('click', function(){
-  swiperContainer.classList.add("swiper_height_auto");
-  readMoreBtn.classList.add("readmore-btn_hidden");
-  hiddenBnt.classList.remove('hidden-bnt_hidden')
-})
+let arrow = readMoreBtn.querySelector("before")
 
-hiddenBnt.addEventListener('click', function(){
-  swiperContainer.classList.remove("swiper_height_auto");
-  readMoreBtn.classList.remove("readmore-btn_hidden");
-  hiddenBnt.classList.add('hidden-bnt_hidden')
-})
+
+function showMore(){
+  if (!showAll){
+    swiperContainer.classList.add("swiper_height_auto");
+    textBtn.textContent = "Скрыть";
+    readMoreBtn.classList.replace("readmore-btn_arrow_down","readmore-btn_arrow_up")
+    showAll = !showAll
+  } else {
+    swiperContainer.classList.remove("swiper_height_auto");
+    textBtn.textContent = "Показать все";
+    readMoreBtn.classList.replace("readmore-btn_arrow_up","readmore-btn_arrow_down")
+    showAll = !showAll
+  }
+}
+
+readMoreBtn.addEventListener('click', showMore)
+
+
+
+
+
+
+
 
 
 

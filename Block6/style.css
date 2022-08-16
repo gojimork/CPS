@@ -15,7 +15,10 @@
 *{
     padding: 0;
     margin: 0;
+    list-style-type: none
 }
+
+
 
 button{
     background:rgba(0, 0, 0, 0);
@@ -47,8 +50,6 @@ flex-shrink : 0;
     padding-bottom: 36px;
     padding-top: 16px;
     padding-left: 16px;
-    /* border: 1px solid red; */
-    
 }
 
 .swiper::after{
@@ -69,6 +70,11 @@ flex-shrink : 0;
 
 .swiper-slide{
     width: auto;
+}
+
+.swiper-item:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 0px grey;
 }
 
 
@@ -107,26 +113,32 @@ flex-shrink : 0;
     background-color:  rgba(181, 182, 188, 1);
 }
 
+.readmore-btn{
+    display: none;
+}
+
 @media (min-width: 768px) {
+
     .swiper{
         box-sizing: border-box;
-        padding: 24px 24px 8px 24px;
+        padding: 24px;
         height: 200px;
+        transition-duration: 1s;
     }
 
     .swiper_height_auto{
-        height: auto;
+        height: 370px;
+        transition-duration: 1s;
     }
 
     .swiper-wrapper{
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         gap: 24px;
         align-content: flex-start;
     }
 
     .swiper-slide{
         height: auto;
-        
     }
 
     .swiper-item{
@@ -138,63 +150,74 @@ flex-shrink : 0;
         display: none;
     }
 
-    .readmore-btn, .hidden-btn{
+    .readmore-btn{
+        display: block;
         font-family: "TT Lakes Medium";
         color: #1B1C21;
         font-size: 16px;
         align-self: flex-start;
         padding-left: 57px;
-        position:relative;
+        position: relative;
         margin-top: 30px;
       }
 
-    .readmore-btn_hidden{
-        display: none;
+    .readmore-btn:hover{
+        opacity: 0.5;
+        transition-duration: 0.5;
     }
+
       
-    .readmore-btn::before{
-        display: block;
+    .readmore-btn_arrow_down::before{
         width: 10px;
         height: 10px;
         content: url("img/arrowDown.png");
-        position:absolute;
+        position: absolute;
         left: 32px;
         top: 0px;
         background-size: contain;
     }
 
-    .hidden-bnt_hidden{
-        display: none;
-    }
-
-    .hidden-btn::before{
-        display: block;
+    .readmore-btn_arrow_up::before{
         width: 10px;
         height: 10px;
-        content: url("img/arrowUP.png");
-        position:absolute;
+        content: url("img/arrowDown.png");
+        position: absolute;
         left: 32px;
-        top: 0px;
+        top: 10px;
         background-size: contain;
+        transform: rotate(180deg);
+    }
+}
+
+
+@media (min-width: 1120px) {
+
+    .wrapper{
+        width: 1120px;
+        margin: 0 auto;
+    }
+        
+    .title{
+        padding-left: 35px;
     }
 
-
-    @media (min-width: 768px) {
-
-        .title{
-            padding-left: 35px;
-        }
-
-        .swiper-wrapper{
-            gap: 32px;
-        }
+    .swiper_height_auto{
+        height: 300px;
+        transition-duration: 1s;
     }
 
+    .swiper-wrapper{
+        gap: 32px;
+    }
 
-        .swiper-item{
-            width: 240px;
-        }
+    .swiper-item{
+        width: 240px;
+    }  
+}
 
+
+
+    
         
     
-}
+
