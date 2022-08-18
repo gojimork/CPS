@@ -1,5 +1,5 @@
 if (window.screen.width < 768) {
-const swiper = new Swiper('.swiper',
+const swiper = new Swiper('.section',
 {
     pagination: {
       el: '.swiper-pagination',
@@ -22,19 +22,18 @@ let readMoreBtn = document.querySelector(".readmore-btn")
 
 let  textBtn = document.querySelector(".readmore-btn__text")
 
-let swiperContainer = document.querySelector(".swiper")
+let swiperWrapper = document.querySelector(".swiper-wrapper")
 
-let arrow = readMoreBtn.querySelector("before")
 
 
 function showMore(){
   if (!showAll){
-    swiperContainer.classList.add("swiper_height_auto");
+    swiperWrapper.classList.add("swiper-wrapper_height_auto");
     textBtn.textContent = "Скрыть";
     readMoreBtn.classList.replace("readmore-btn_arrow_down","readmore-btn_arrow_up")
     showAll = !showAll
   } else {
-    swiperContainer.classList.remove("swiper_height_auto");
+    swiperWrapper.classList.remove("swiper-wrapper_height_auto");
     textBtn.textContent = "Показать все";
     readMoreBtn.classList.replace("readmore-btn_arrow_up","readmore-btn_arrow_down")
     showAll = !showAll

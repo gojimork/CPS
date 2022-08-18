@@ -18,8 +18,6 @@
     list-style-type: none
 }
 
-
-
 button{
     background:rgba(0, 0, 0, 0);
     border: rgba(0, 0, 0, 0) ;
@@ -30,25 +28,20 @@ body{
     background-color: #F8F8F8;
 }
 
-image{
-    flex-grow: 0;
-flex-shrink : 0;
-}
 
-.title{
+.section__title{
     font-family: "TT Lakes Regular";
     font-size: 16px;
     line-height: 24px;
     color: #7E7E82;
 
-    padding: 16px;
+    padding: 16px 0 16px 0;
     background: linear-gradient(to right, #F8F8F8, #FFFFFF);
     border-top: 1px solid #D9FFF5;
 }
 
 .swiper{
     padding-bottom: 36px;
-    padding-top: 16px;
     padding-left: 16px;
 }
 
@@ -58,7 +51,7 @@ flex-shrink : 0;
     content: "";
     display: block;
     position: absolute;
-    top: 10px;
+    top: 95px;
     right:0px;
     background: linear-gradient(
       270deg,
@@ -68,15 +61,13 @@ flex-shrink : 0;
     z-index: 2;
 }
 
+.swiper-wrapper{
+    padding-top: 16px;
+}
+
 .swiper-slide{
     width: auto;
 }
-
-.swiper-item:hover{
-    cursor: pointer;
-    box-shadow: 5px 5px 5px 0px grey;
-}
-
 
 .swiper-item{
     display: flex;
@@ -89,7 +80,11 @@ flex-shrink : 0;
     padding: 16px;
     align-items: center;
     background-color:#FFFFFF;
-    
+}
+
+.swiper-item:hover{
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 0px grey;
 }
 
 .swiper-link{
@@ -121,20 +116,27 @@ flex-shrink : 0;
 
     .swiper{
         box-sizing: border-box;
-        padding: 24px;
-        height: 200px;
-        transition-duration: 1s;
+        padding-left: 24px;
+        
     }
 
-    .swiper_height_auto{
-        height: 370px;
-        transition-duration: 1s;
+    .swiper::after{
+        display: none;
     }
 
     .swiper-wrapper{
         flex-wrap: wrap;
         gap: 24px;
         align-content: flex-start;
+        height: 190px;
+        box-sizing: border-box;
+        overflow-y: hidden;
+        transition:  0.2s
+    }
+
+    .swiper-wrapper_height_auto{
+        height: 365px;
+        transition:  0.2s
     }
 
     .swiper-slide{
@@ -159,7 +161,7 @@ flex-shrink : 0;
         padding-left: 57px;
         position: relative;
         margin-top: 30px;
-      }
+    }
 
     .readmore-btn:hover{
         opacity: 0.5;
@@ -196,19 +198,22 @@ flex-shrink : 0;
         width: 1120px;
         margin: 0 auto;
     }
-        
-    .title{
-        padding-left: 35px;
-    }
 
-    .swiper_height_auto{
-        height: 300px;
-        transition-duration: 1s;
+    .swiper{
+        padding: 0 0 0 32px;
     }
 
     .swiper-wrapper{
         gap: 32px;
+
     }
+        
+
+    .swiper-wrapper_height_auto{
+        height: 300px;
+    }
+
+   
 
     .swiper-item{
         width: 240px;
