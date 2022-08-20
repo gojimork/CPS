@@ -28,12 +28,12 @@ let swiperWrapper = document.querySelector(".swiper-wrapper")
 
 function showMore(){
   if (!showAll){
-    swiperWrapper.classList.add("swiper-wrapper_height_auto");
+    swiperWrapper.classList.add("swiper-wrapper_opened");
     textBtn.textContent = "Скрыть";
     readMoreBtn.classList.replace("readmore-btn_arrow_down","readmore-btn_arrow_up")
     showAll = !showAll
   } else {
-    swiperWrapper.classList.remove("swiper-wrapper_height_auto");
+    swiperWrapper.classList.remove("swiper-wrapper_opened");
     textBtn.textContent = "Показать все";
     readMoreBtn.classList.replace("readmore-btn_arrow_up","readmore-btn_arrow_down")
     showAll = !showAll

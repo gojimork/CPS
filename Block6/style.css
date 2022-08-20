@@ -134,7 +134,7 @@ body{
         transition:  0.2s
     }
 
-    .swiper-wrapper_height_auto{
+    .swiper-wrapper_opened{
         height: 365px;
         transition:  0.2s
     }
@@ -203,13 +203,10 @@ body{
         gap: 32px;
 
     }
-        
 
-    .swiper-wrapper_height_auto{
+    .swiper-wrapper_opened{
         height: 300px;
     }
-
-   
 
     .swiper__link{
         width: 240px;
