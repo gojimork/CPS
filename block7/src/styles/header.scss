@@ -1,0 +1,201 @@
+@import 'variables';
+
+.header{
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(desktop){
+      gap: 8px;
+      padding: 0 32px;
+    }
+
+    .nav{
+      @include breakpoint(desktop){
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .nav__btn{
+      @include breakpoint(desktop){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      
+    }
+  
+    .nav__list{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      gap: 39px;
+      padding: 19px 20px;
+      border-bottom: 1px solid #D9FFF5;
+      @include breakpoint(desktop){
+        padding:0;
+        background-color: transparent;
+        border-bottom: 0;
+      }
+    
+      .nav__item{
+        display:flex;
+        align-items: center;
+        gap: 16px;
+        @include breakpoint(tablet){
+          gap: 43px;
+        }
+    
+        .nav__subitem{
+          display:flex;
+          align-items: center;
+          gap: 16px;
+    
+          &:first-child{
+            display: none;
+            @include breakpoint(tablet){
+              display: flex;
+            }
+            @include breakpoint(desktop){
+              display: none;
+            }
+          }
+    
+          &:last-child{
+            position:relative;
+    
+            &::before{
+              content: "";
+              display: block;
+              width: 2px;
+              height: 32px;
+              background-color: #EAEAEA;
+              position: absolute;
+              right: 115px;
+              top: 5px;
+              border-radius: 1px;
+              @include breakpoint(desktop){
+                display: none;
+              }
+            }
+          }
+            .nav__text{
+                display: none;
+                @include breakpoint(desktop){
+                  display: inline;
+                  color: #1B1C21;
+                  font-family: "TT Lakes Medium" ;
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+            }
+        }
+
+        &:first-child{
+          @include breakpoint(tablet){
+            position:relative;
+          }
+          @include breakpoint(desktop){
+            display: none;
+          }
+          &::before{
+            @include breakpoint(tablet){
+              content: "";
+              display: block;
+              width: 2px;
+              height: 32px;
+              background-color: #EAEAEA;
+              position: absolute;
+              right: 115px;
+              top: 10px;
+              border-radius: 1px;
+            }
+          }
+        }
+      } 
+        &:last-child{
+          @include breakpoint(desktop){
+            gap: 32px;
+          }
+
+        }
+    }
+    
+    .nav__title{
+      padding: 20px 20px;
+      @include breakpoint(desktop){
+        position: relative;
+      }
+      &::before{
+        content: "";
+        border-right: 4px solid #41f6d7;
+        height: 40px;
+        display: inline-block;
+        border-radius: 0 4px 4px 0;
+        position: absolute;
+        top: 110px;
+        left:0;
+        @include breakpoint(desktop){
+          left: -32px;
+          top: 0;
+        }
+      }
+      @include breakpoint(desktop){
+        padding: 0;
+      }
+      .title__text{
+        font-family: "TT Lakes Bold";
+        font-size: 28px;
+      }    
+    }
+
+    .nav-scroller__list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-left: 20px;
+        gap:4px;
+        @include breakpoint(desktop){
+          padding: 0;
+          flex-wrap: wrap;
+        }
+      
+        .nav-scroller__link {
+          display: block;
+          font-family: "TT Lakes Medium";
+          color: #7e7e82;
+          padding: 0.5rem 1rem;
+          background-color: #f8f8f8;
+          border: 2px solid rgba(225, 0, 0, 0);
+          border-radius: 6px;
+          &:hover{
+            border: 2px solid #b8ffec;
+            background-color: #ffffff;
+            border-radius: 6px;
+          } 
+        }
+      
+        &::after {
+          width: 20px;
+          height: 40px;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 170px;
+          right:0px;
+          background: linear-gradient(
+            270deg,
+            #f8f8f8 16.84%,
+            rgba(248, 248, 248, 0.0001) 100%
+          );
+          @include breakpoint(desktop){
+            display: none;
+          }
+        }
+      }
+  }
+

@@ -1,0 +1,45 @@
+.offer{
+    padding: 0 16px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    @include breakpoint(desktop){
+        padding: 0 32px;
+      }
+
+    .offer__description{
+        font-family: 'TT Lakes Regular';
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+        @include breakpoint(tablet){
+            width: 420px;
+        }
+
+        
+    }
+
+    .offer__link{
+        font-family: 'TT Lakes Medium';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width:20px;
+            height: 20px;
+            background-image: url(../img/pink_arrow.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 26px;
+            @include breakpoint(tablet){
+                top: 3px;
+            }
+        }
+    }
+}
