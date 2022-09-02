@@ -3,10 +3,7 @@
 .header{
     display: flex;
     flex-direction: column;
-    @include breakpoint(desktop){
-      gap: 8px;
-      padding: 0 32px;
-    }
+    
 
     .nav{
       @include breakpoint(desktop){
@@ -23,6 +20,9 @@
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        &:hover{
+          opacity: 0.5;
+        }
       }
       
     }
@@ -33,7 +33,7 @@
       align-items: center;
       background-color: white;
       gap: 39px;
-      padding: 19px 20px;
+      padding: 18.6px 16px;
       border-bottom: 1px solid #D9FFF5;
       @include breakpoint(desktop){
         padding:0;
@@ -123,26 +123,32 @@
 
         }
     }
+
+    .header__logo{
+      display: flex;
+    }
+
+    .title::before{
+      content: "";
+      border-right: 4px solid #41f6d7;
+      height: 40px;
+      display: inline-block;
+      border-radius: 0 4px 4px 0;
+      position: absolute;
+      top: 110px;
+      left:0;
+      @include breakpoint(desktop){
+        left: -32px;
+        top: 0;
+      }
+    }
     
     .nav__title{
       padding: 20px 20px;
       @include breakpoint(desktop){
         position: relative;
       }
-      &::before{
-        content: "";
-        border-right: 4px solid #41f6d7;
-        height: 40px;
-        display: inline-block;
-        border-radius: 0 4px 4px 0;
-        position: absolute;
-        top: 110px;
-        left:0;
-        @include breakpoint(desktop){
-          left: -32px;
-          top: 0;
-        }
-      }
+
       @include breakpoint(desktop){
         padding: 0;
       }

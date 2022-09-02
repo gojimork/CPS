@@ -3,6 +3,7 @@ import Swiper, {Pagination} from 'swiper';
 import './desc'
 import './bandsSlider'
 import './techSlider'
+import './aside'
 
 if (window.screen.width < 768) {
     const brandsSlider = new Swiper('.brands-slider',

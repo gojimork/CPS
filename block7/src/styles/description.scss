@@ -1,6 +1,5 @@
 .description{
     display: flex; 
-    justify-content: center;
     flex-direction: column;
     gap: 16px; 
     @include breakpoint(tablet){
@@ -9,10 +8,7 @@
       padding: 0 20px;
       gap: 48px;
     }
-    @include breakpoint(desktop){
-      padding: 0 32px;
-      height: auto;
-    }
+
   
     .description__text{
       display:flex;

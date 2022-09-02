@@ -1,4 +1,4 @@
-@import '../styles/icon.css';
+@import '../styles/icon.scss';
 @import '../styles/fonts.scss';
 @import '../styles/nulling.css';
 @import '../styles/header.scss';
@@ -15,9 +15,17 @@
 @import '../styles/aside.scss';
 @import '../styles/order-btn.scss';
 @import '../styles/feedback.scss';
+@import '../styles/section.scss';
   
 body{
   background-color: #f8f8f8;
+}
+
+.total-wrap{
+  @include breakpoint(desktop){
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
@@ -34,8 +42,7 @@ body{
   @include breakpoint(desktop){
     position: relative;
     max-width: 1120px;
-    padding: 42px 0 0 320px;
-    margin: 0 auto;
+    padding: 42px 0 0 0px;
   }
 }
 

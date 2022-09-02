@@ -78,6 +78,14 @@
           padding: 16px;
           align-content: flex-start ;
           background-color:#FFFFFF;
+          &:hover{
+            cursor: pointer;
+            box-shadow: 5px 5px 5px 0px grey;
+            @include breakpoint(desktop){
+              box-shadow: none;
+              opacity: 0.5;
+            }
+          }
           @include breakpoint(tablet){
             grid-template-columns: 4fr 1fr 1fr 1fr;
             grid-template-rows: 1fr;
@@ -88,13 +96,9 @@
             border-radius: 0;
             padding: 16px 0;
           }
-          @include breakpoint(desktop){
-          }
+          
     
-          &:hover{
-            cursor: pointer;
-            box-shadow: 5px 5px 5px 0px grey;
-          }
+          
 
           .price-slider__item{
             display: flex;

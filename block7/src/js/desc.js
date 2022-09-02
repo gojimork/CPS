@@ -16,6 +16,5 @@ function paragraphsShowMore(){
     descShowAll = !descShowAll
   }
 }
-console.log(descParagraphs)
 
 descMoreBtn.addEventListener("click", paragraphsShowMore)
