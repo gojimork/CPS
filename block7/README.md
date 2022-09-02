@@ -1,3 +1,5 @@
+https://gojimork.github.io/CPS_Build/
+
 # Webpack Static Site Starter Kit
 
 ## Требования к проекту
