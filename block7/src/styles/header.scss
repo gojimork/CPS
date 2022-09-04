@@ -3,6 +3,9 @@
 .header{
     display: flex;
     flex-direction: column;
+    @include breakpoint(desktop){
+      gap: 8px;
+    }
     
 
     .nav{
@@ -35,6 +38,9 @@
       gap: 39px;
       padding: 18.6px 16px;
       border-bottom: 1px solid #D9FFF5;
+      @include breakpoint(tablet){
+        padding: 18.6px 24px;
+      }
       @include breakpoint(desktop){
         padding:0;
         background-color: transparent;
@@ -144,7 +150,10 @@
     }
     
     .nav__title{
-      padding: 20px 20px;
+      padding: 24px 16px;
+      @include breakpoint(tablet){
+        padding: 24px 24px 32px 24px
+      }
       @include breakpoint(desktop){
         position: relative;
       }
@@ -163,8 +172,11 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         white-space: nowrap;
-        padding-left: 20px;
+        padding-left: 16px;
         gap:4px;
+        @include breakpoint(tablet){
+          padding-left: 24px;
+        }
         @include breakpoint(desktop){
           padding: 0;
           flex-wrap: wrap;

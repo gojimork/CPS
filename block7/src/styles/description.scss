@@ -5,7 +5,7 @@
     @include breakpoint(tablet){
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 20px;
+      padding: 0 24px;
       gap: 48px;
     }
 
@@ -13,7 +13,7 @@
     .description__text{
       display:flex;
       flex-direction: column;
-      padding: 0 20px;
+      padding: 0 16px;
       gap: 16px;
       @include breakpoint(tablet){
         display: flex;

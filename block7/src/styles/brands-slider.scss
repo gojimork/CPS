@@ -1,143 +1,144 @@
-.brands-slider{
-    padding-bottom: 36px;
-    width: 100%;
-    @include breakpoint(tablet){
-      box-sizing: border-box;
-      padding-bottom: 0px;
-    }
+// .brands-slider{
+//     // padding-bottom: 36px;
+//     // width: 100%;
+//     // @include breakpoint(tablet){
+//     //   box-sizing: border-box;
+//     //   padding-bottom: 0px;
+//     // }
 
-    &__title{
-      font-family: "TT Lakes Regular";
-      font-size: 16px;
-      line-height: 24px;
-      color: #7E7E82;
+//     // &__title{
+//     //   font-family: "TT Lakes Regular";
+//     //   font-size: 16px;
+//     //   line-height: 24px;
+//     //   color: #7E7E82;
     
-      padding: 16px 0 16px 16px;
-      background: linear-gradient(to right, #F8F8F8, #FFFFFF);
-      border-top: 1px solid #D9FFF5;
-    }
+//     //   padding: 16px 0 16px 16px;
+//     //   background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+//     //   border-top: 1px solid #D9FFF5;
+//     // }
 
-    .brands-slider__wrapper{
-      padding-top: 16px;
-      padding-left: 16px;
-      width: 100%;
-      @include breakpoint(desktop){
-        padding: 16px 32px 0 32px;
-      }
+//     .brands-slider__wrapper{
+//       // padding-top: 16px;
+//       // padding-left: 16px;
+//       // width: 100%;
+//       // @include breakpoint(desktop){
+//       //   padding: 16px 32px 0 32px;
+//       // }
 
 
-      @include breakpoint(tablet){
-        flex-wrap: wrap;
-        gap: 24px;
-        align-content: flex-start;
-        height: 190px;
-        box-sizing: border-box;
-        overflow-y: hidden;
-        transition:  0.2s;
+//       @include breakpoint(tablet){
+//       //   flex-wrap: wrap;
+//       //   gap: 24px;
+//       //   align-content: flex-start;
+//       //   height: 190px;
+//       //   box-sizing: border-box;
+//       //   overflow-y: hidden;
+//       //   transition:  0.2s;
 
-        &--full-brands--opened{
-          height: 365px;
-          transition:  0.2s;
-          @include breakpoint(desktop){
-            height: 287px;
-          }
-        }
-      }
+//         // &--full-brands--opened{
+//         //   height: 365px;
+//         //   transition:  0.2s;
+//         //   @include breakpoint(desktop){
+//         //     height: 287px;
+//         //   }
+//         // }
+//       }
 
-      @include breakpoint(desktop){
-        gap: 32px;
-      }
+//       // @include breakpoint(desktop){
+//       //   gap: 32px;
+//       // }
 
 
       
       
       
-      .swiper-slide{
-        width: auto;
-        @include breakpoint(tablet){
-          height: auto;
-        }
+//       // .swiper-slide{
+//       //   width: auto;
+//       //   @include breakpoint(tablet){
+//       //     height: auto;
+//       //   }
+//       // }
     
-        .brands-slider__link{
-          display: flex;
-          width: 240px;
-          height: 72px;
-          box-sizing: border-box;
-          justify-content: space-between;
-          border: 1px solid rgba(234, 234, 234, 1);
-          border-radius: 6px;
-          padding: 16px;
-          align-items: center;
-          background-color:#FFFFFF;
-          @include breakpoint(tablet){
-            width: 224px;
-            margin-bottom: -8px;
-          }
+//         .brands-slider__link{
+//           // display: flex;
+//           // width: 240px;
+//           // height: 72px;
+//           // box-sizing: border-box;
+//           // justify-content: space-between;
+//           // border: 1px solid rgba(234, 234, 234, 1);
+//           // border-radius: 6px;
+//           // padding: 16px;
+//           // align-items: center;
+//           // background-color:#FFFFFF;
+//           // @include breakpoint(tablet){
+//           //   width: 224px;
+//           //   margin-bottom: -8px;
+//           // }
 
-          @include breakpoint(desktop){
-            width: 240px;
-          }
+//           @include breakpoint(desktop){
+//             // width: 240px;
+//             // height: 100px;
+//           }
     
-          &:hover{
-            cursor: pointer;
-            box-shadow: 5px 5px 5px 0px grey;
-          }
-        }
-      }
-    }
+//           // &:hover{
+//           //   cursor: pointer;
+//           //   box-shadow: 5px 5px 5px 0px grey;
+//           // }
+//         }
+//     }
   
-    &::after{
-      width: 24px;
-      height: 81px;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 95px;
-      right:0px;
-      background: linear-gradient(
-        270deg,
-        #f8f8f8 16.84%,
-        rgba(248, 248, 248, 0.0001) 100%
-      );
-      z-index: 2;
-      @include breakpoint(tablet){
-        display: none;
-      }
-    }
+//     // &::after{
+//     //   width: 24px;
+//     //   height: 81px;
+//     //   content: "";
+//     //   display: block;
+//     //   position: absolute;
+//     //   top: 95px;
+//     //   right:0px;
+//     //   background: linear-gradient(
+//     //     270deg,
+//     //     #f8f8f8 16.84%,
+//     //     rgba(248, 248, 248, 0.0001) 100%
+//     //   );
+//     //   z-index: 2;
+//     //   @include breakpoint(tablet){
+//     //     display: none;
+//     //   }
+//     // }
   
   
     
-    .brands-slider__readmore-btn{
-      display: none;
-      @include breakpoint(tablet){
-      display: block;
-      padding-left: 57px;
-      position: relative;
-      margin-top: 30px;
-      &:hover{
-        opacity: 0.5;
-        transition-duration: 0.5;
-        }
-      }
-      &--arrow--down::before, &--arrow--up::before{
-        width: 10px;
-        height: 10px;
-        content: url("../img/arrow.png");
-        position: absolute;
-        left: 32px;
-        top: 2px;
-        background-size: contain;
-      }
+//     .brands-slider__readmore-btn{
+//       // display: none;
+//       // @include breakpoint(tablet){
+//       // display: block;
+//       // padding-left: 57px;
+//       // position: relative;
+//       // margin-top: 30px;
+//       // &:hover{
+//       //   opacity: 0.5;
+//       //   transition-duration: 0.5;
+//       //   }
+//       // }
+//       // &--arrow--down::before, &--arrow--up::before{
+//       //   width: 10px;
+//       //   height: 10px;
+//       //   content: url("../img/arrow.png");
+//       //   position: absolute;
+//       //   left: 32px;
+//       //   top: 2px;
+//       //   background-size: contain;
+//       // }
 
-      &--arrow--up::before{
-        top: 4px;
-        transform: rotate(180deg);
-      }
-      &-text{
-        font-family: "TT Lakes Medium";
-        color: #1B1C21;
-        font-size: 16px;
-      } 
-    }
-}
+//       // &--arrow--up::before{
+//       //   top: 4px;
+//       //   transform: rotate(180deg);
+//       // }
+//       // &-text{
+//       //   font-family: "TT Lakes Medium";
+//       //   color: #1B1C21;
+//       //   font-size: 16px;
+//       // } 
+//     }
+// }
 

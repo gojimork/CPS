@@ -1,6 +1,7 @@
 .price-slider{
     padding-bottom: 36px;
     width:100%;
+    border-top: 1px solid #D9FFF5;
     @include breakpoint(tablet){
       padding-bottom: 0;
     }
@@ -13,7 +14,6 @@
     
       padding: 16px 0 16px 16px;
       background: linear-gradient(to right, #F8F8F8, #FFFFFF);
-      border-top: 1px solid #D9FFF5;
     }
     
     &__title-list{
@@ -189,16 +189,16 @@
       }
     }
   
-    .swiper-pagination-bullet{
-      background-color: rgba(221, 221, 221, 1);
-      opacity: 1;
-      width: 12px;
-      height: 12px;
-    }
+    // .swiper-pagination-bullet{
+    //   background-color: rgba(221, 221, 221, 1);
+    //   opacity: 1;
+    //   width: 12px;
+    //   height: 12px;
+    // }
   
-    .swiper-pagination-bullet-active{
-      background-color:  rgba(181, 182, 188, 1);
-    }
+    // .swiper-pagination-bullet-active{
+    //   background-color:  rgba(181, 182, 188, 1);
+    // }
 
   }
 
