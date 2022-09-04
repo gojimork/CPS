@@ -1,0 +1,28 @@
+.order-btn{
+    font-family: 'TT Lakes Bold';
+    color: white;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: left;
+
+    position: relative;
+    width: 119px;
+    height: 32px;
+    background-color: #FF3E79;
+    border-radius: 16px;
+    padding-left: 12px;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../img/white_arrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        bottom: 11px;
+        left: 90px;
+    }
+}

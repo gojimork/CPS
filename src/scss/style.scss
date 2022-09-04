@@ -1,0 +1,84 @@
+@import '../styles/icon.scss';
+@import '../styles/fonts.scss';
+@import '../styles/nulling.scss';
+@import '../styles/header.scss';
+@import '../styles/description.scss';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+@import '../styles/footer.scss';
+@import '../styles/variables';
+@import '../styles/swiper-pagination.scss';
+@import '../styles/aside.scss';
+@import '../styles/order-btn.scss';
+@import '../styles/feedback.scss';
+@import '../styles/section.scss';
+@import '../styles/slider-section.scss';
+  
+body{
+  background-color: #f8f8f8;
+}
+
+.total-wrap{
+  @include breakpoint(desktop){
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.fixed{
+  position: fixed;
+}
+
+
+.container{
+  max-width: 1120px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+
+  @include breakpoint(tablet){
+    gap:32px;
+  }
+  @include breakpoint(desktop){
+    position: relative;
+    max-width: 1120px;
+    padding: 42px 0 0 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
