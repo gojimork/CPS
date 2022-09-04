@@ -1,4 +1,5 @@
 const asideLinks = document.querySelectorAll('.aside-link')
+const totalWrap = document.querySelector('.total-wrap')
 
 
 
@@ -38,6 +39,7 @@ function asideOpen(curentAside){
             asideClose(asideActive)
         } 
         curentAside.classList.add('open');
+        totalWrap.classList.add('fixed');
         curentAside.addEventListener('click', function(e){
             if(!e.target.closest('.aside-content')){
                 asideClose(e.target.closest('aside'))
@@ -47,5 +49,6 @@ function asideOpen(curentAside){
 }
 
 function asideClose(asideActive){
+    totalWrap.classList.remove('fixed')
     asideActive.classList.remove('open')
 }
