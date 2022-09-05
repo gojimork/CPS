@@ -6,43 +6,19 @@ import './techSlider'
 import './aside'
 
 if (window.screen.width < 768) {
-  new Swiper('.brands-slider',
-    {
-        modules: [Pagination],
+  const sliders = document.querySelectorAll('.swiper')
 
-        pagination: {
-          el: '.brands-slider__pagination',
-          clickable: true
-        },
+  sliders.forEach((el) => {
+    new Swiper(el, {
+      modules: [Pagination],
+
+      pagination: {
+        el: el.querySelector('.swiper-pagination'),
+        clickable: true
+      },
     
-        slidesPerView: "auto",
-        spaceBetween: 16
-    });
-
-  new Swiper('.tech-slider',
-    {
-        modules: [Pagination],
-
-        pagination: {
-          el: '.tech-slider__pagination',
-          clickable: true
-        },
-    
-        slidesPerView: "auto",
-        spaceBetween: 16
-    });
-    
-  new Swiper('.price-slider',
-    {
-        modules: [Pagination],
-
-        pagination: {
-          el: '.price-slider__pagination',
-          clickable: true
-        },
-    
-        slidesPerView: "auto",
-        spaceBetween: 16
-    });
-
+      slidesPerView: "auto",
+      spaceBetween: 16
+    })
+  })
 }
