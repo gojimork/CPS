@@ -1,23 +1,35 @@
-const asideLinks = document.querySelectorAll('.aside-link')
+const asideLink = document.querySelector('.nav__burger')
+const callbackLinks = document.querySelectorAll('.nav__callback')
+const feedbackLinks = document.querySelectorAll('.nav__feedback')
+
 const totalWrap = document.querySelector('.total-wrap')
 
+asideLink.addEventListener('click', function(e){
+    const curentAside = document.querySelector('.aside')
+    asideOpen(curentAside)
+    e.preventDefault()
+})
 
-
-
-if(asideLinks.length > 0){
-    for(let i = 0; i < asideLinks.length; i++){
-        const asideLink = asideLinks[i]
-        
-            
-        asideLink.addEventListener('click', function(e){
-            const asideName = asideLink.getAttribute('href').replace('#','')
-            const curentAside = document.getElementById(asideName)
-            asideOpen(curentAside)
-            e.preventDefault()
-        })
-
-    }
+for(let i = 0; i < callbackLinks.length; i++){
+    let callbackLink = callbackLinks[i]
+    callbackLink.addEventListener('click', function(e){
+        const curentAside = document.getElementById('callback')
+        asideOpen(curentAside)
+        e.preventDefault()
+    })
 }
+
+for(let i = 0; i < feedbackLinks.length; i++){
+    let feedbackLink = feedbackLinks[i]
+    feedbackLink.addEventListener('click', function(e){
+        const curentAside = document.getElementById('feedback')
+        asideOpen(curentAside)
+        e.preventDefault()
+    })
+}
+
+
+
 
 const asideCloseBtns = document.querySelectorAll('.aside-close');
 if(asideCloseBtns.length >  0){
@@ -26,6 +38,7 @@ if(asideCloseBtns.length >  0){
         const closeBtn = asideCloseBtns[i]
         
         closeBtn.addEventListener('click', function(e){
+            console.log('close')
             asideClose(closeBtn.closest('aside'));
             e.preventDefault();
         })

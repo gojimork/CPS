@@ -1,7 +1,7 @@
 if (window.screen.width >= 768) {
   let techShowAll = false
   let techMoreBtn = document.querySelector(".tech-slider__readmore-btn")
-  let techTextBtn = document.querySelector(".tech-slider__readmore-btn-text")
+  let techTextBtn = document.getElementById("tech-btn")
   let techWrapper = document.querySelector(".tech-slider__wrapper")
 
   function wrapperShowMore(){
@@ -12,7 +12,7 @@ if (window.screen.width >= 768) {
      techShowAll = !techShowAll
   } else {
     techWrapper.classList.remove("tech-slider__wrapper--full-tech--opened");
-    techTextBtn.textContent = "Читать далее";
+    techTextBtn.textContent = "Показать все";
     techMoreBtn.classList.replace("tech-slider__readmore-btn--arrow--up","tech-slider__readmore-btn--arrow--down")
     techShowAll = !techShowAll
   }

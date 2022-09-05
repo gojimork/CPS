@@ -1,6 +1,6 @@
 let brandsShowAll = false
 let brandsMoreBtn = document.querySelector(".brands-slider__readmore-btn")
-let brandsTextBtn = document.querySelector(".brands-slider__readmore-btn-text")
+let brandsTextBtn = document.getElementById("brands-btn")
 let brandsWrapper = document.querySelector(".brands-slider__wrapper")
 function brandsShowMore(){
   if (!brandsShowAll){
