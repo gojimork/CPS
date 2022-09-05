@@ -1,9 +1,10 @@
 .slider-section {
   width: 100%;
   border-top: 1px solid #d9fff5;
-  display: flex;
-  flex-direction: column;
   @include breakpoint(tablet) {
+    display: flex;
+    gap:24px;
+    flex-direction: column;
     box-sizing: border-box;
     padding-bottom: 0px;
   }
@@ -31,12 +32,12 @@
             grid-template-columns: 4fr 1fr 1fr 1fr;
             grid-template-rows: 1fr;
             width: auto;
-            height: 56px;
+            height: auto;
             margin: 0 24px;
             padding: 0 16px;
         }
         @include breakpoint(desktop) {
-            margin: 0 56px;
+            margin: 0 40px;
         grid-template-columns: 2fr 1fr 1fr 1fr;
         }
 
@@ -69,9 +70,10 @@
       flex-wrap: wrap;
       gap: 24px;
       align-content: flex-start;
-      height: 195px;
+      height: 175px;
       box-sizing: border-box;
-      padding: 24px;
+      // padding: 24px;
+      padding: 0 24px;
       overflow-y: hidden;
       transition: 0.2s;
     }
@@ -281,7 +283,7 @@
       display: block;
       padding-left: 57px;
       position: relative;
-      margin-top: 30px;
+      align-self: flex-start;
 
       &-text {
         font-family: "TT Lakes Medium";
@@ -324,14 +326,14 @@
     transform: rotate(180deg);
   }
   .brands-slider__wrapper--full-brands--opened {
-    height: 370px;
+    height: 345px;
     transition: 0.2s;
     @include breakpoint(desktop) {
       height: 297px;
     }
   }
   .tech-slider__wrapper--full-tech--opened {
-    height: 370px;
+    height: 345px;
     transition: 0.2s;
     @include breakpoint(desktop){
       height: 378px;
@@ -364,10 +366,10 @@
     flex-direction: column;
     gap:16px;
     @include breakpoint(tablet){
-        padding: 24px 0 47px 24px;
+        padding: 0 0 0 24px;
     }
     @include breakpoint(desktop){
-        padding: 32px 0 50px 32px;
+        padding: 0 0 0 32px;
       }
 
     .price-slider__description{
@@ -405,4 +407,8 @@
             }
         }
     }
+}
+
+.swiper--tech{
+  margin: 0 0 ;
 }

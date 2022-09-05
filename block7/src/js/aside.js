@@ -31,7 +31,7 @@ for(let i = 0; i < feedbackLinks.length; i++){
 
 
 
-const asideCloseBtns = document.querySelectorAll('.aside-close');
+const asideCloseBtns = document.querySelectorAll('.aside__btn-position');
 if(asideCloseBtns.length >  0){
     
     for(let i = 0; i < asideCloseBtns.length; i++){
